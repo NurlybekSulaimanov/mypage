@@ -160,7 +160,7 @@ class Home extends Component {
       HOME: {
         name: "HOME",
         width: "135px",
-        status: false,
+        status: true,
         hover: false,
         iconGrey: homeIconGrey,
         iconLightGrey: homeIconLightGrey,
@@ -169,7 +169,7 @@ class Home extends Component {
       ABOUT: {
         name: "ABOUT",
         width: "145px",
-        status: true,
+        status: false,
         hover: false,
         iconGrey: aboutGrey,
         iconLightGrey: aboutLightGrey,
@@ -1502,7 +1502,12 @@ class Home extends Component {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(3,1fr)",
+                gridTemplateColumns:
+                  screenWidth <= 550
+                    ? "1fr"
+                    : screenWidth <= 991
+                    ? "repeat(2,1fr)"
+                    : "repeat(3,1fr)",
                 gridGap: "30px",
                 gap: "30px",
                 paddingBottom: "120px",
