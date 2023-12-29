@@ -37,6 +37,7 @@ import compon from "./photos/compon.jpg";
 import griddd from "./photos/grid.jpg";
 class Home extends Component {
   state = {
+    showAbout: false,
     shownProject: {},
     showProject: false,
     myProjects: {
@@ -415,7 +416,7 @@ class Home extends Component {
     );
   }
   _homepage() {
-    const { darkMode, screenWidth } = this.state;
+    const { darkMode, screenWidth, showAbout } = this.state;
     return (
       <div
         style={{
@@ -553,6 +554,9 @@ class Home extends Component {
                 flexDirection: "row-reverse",
                 position: "relative", // Set parent div to relative position
               }}
+              onClick={() => {
+                this.setState({ showAbout: true });
+              }}
             >
               <div
                 style={{
@@ -628,6 +632,66 @@ class Home extends Component {
                   }}
                 />
               </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            position: "fixed",
+            width: "auto",
+            height: "100%",
+            top: 0,
+            left: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.65)",
+            zIndex: 99,
+            display: showAbout ? "flex" : "none",
+            justifyContent: "center",
+            alignItems: "flex-start",
+            overflowY: "auto",
+          }}
+        >
+          <div
+            style={{
+              display: showAbout ? "block" : "none",
+              width: "90%",
+              zIndex: 100,
+              backgroundColor: darkMode ? "#252525" : "#F5F5F5",
+              margin: screenWidth <= 800 ? "10% 15%" : "5% 15%",
+            }}
+          >
+            <div
+              data-aos="fade"
+              className="aos-init aos-animate"
+              style={{ textAlign: "center", color: "#FFB400" }}
+            >
+              {this._about()}
+              <button
+                style={{
+                  position: "absolute",
+                  top: "-52px",
+                  right: "-86px",
+                  backgroundColor: "transparent",
+                  height: "50px",
+                  width: "50px",
+                  border: "none",
+                  borderRadius: "50%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  cursor: "pointer",
+                }}
+                onClick={() => {
+                  this.setState({
+                    showAbout: false,
+                  });
+                }}
+              >
+                <img
+                  src={darkMode ? closeIcon : closeWhiteIcon}
+                  alt="closeIcon"
+                  style={{ width: "50px", height: "50px" }}
+                />
+              </button>
             </div>
           </div>
         </div>
@@ -975,13 +1039,14 @@ class Home extends Component {
                 </div>
                 <div style={{ position: "relative" }}>
                   <a
-                    href="/src\components\photos\Full_Stack_Nurlybek_Sulaimanov.pdf" // Specify the path to your PDF file
-                    download="your-cv.pdf" // Specify the desired name for the downloaded file
+                    href="https://drive.google.com/file/d/1tdb2AdGeNrJY4IKXb2n6nN8adFB6x5S9/view?usp=sharing"
+                    download="Full_Stack_Nurlybek_Sulaimanov.pdf"
+                    target="blank"
                     style={{
                       width: "225px",
                       display: "flex",
                       flexDirection: "row-reverse",
-                      position: "relative", // Set parent div to relative position
+                      position: "relative",
                     }}
                   >
                     <div
@@ -1418,7 +1483,7 @@ class Home extends Component {
             </div>
           </div>
         </div>
-        {this.sideIcons()}
+        {!this.state.showAbout && this.sideIcons()}
       </div>
     );
   }
