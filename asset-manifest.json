@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/mypage/static/css/main.254da0a7.css",
+    "main.js": "/mypage/static/js/main.174cded4.js",
+    "static/js/787.80017ea5.chunk.js": "/mypage/static/js/787.80017ea5.chunk.js",
+    "static/media/phone-screen.png": "/mypage/static/media/phone-screen.b5edaefe0441c54b48c6.png",
+    "static/media/me.jpg": "/mypage/static/media/me.c1822232f28aaf3dabb9.jpg",
+    "static/media/News_homepage.jpg": "/mypage/static/media/News_homepage.dc04b21dc37de6765c60.jpg",
+    "static/media/grid.jpg": "/mypage/static/media/grid.a0d841fc74ca75b4f321.jpg",
+    "static/media/compon.jpg": "/mypage/static/media/compon.b8c91a2e2acd63fbab09.jpg",
+    "static/media/QR.jpg": "/mypage/static/media/QR.30e1bb6bd30f03b948ff.jpg",
+    "static/media/ToDo_list.jpg": "/mypage/static/media/ToDo_list.1dfb93e8464c0bf94261.jpg",
+    "static/media/tipCalc.jpg": "/mypage/static/media/tipCalc.3140a2adf18acbe816a9.jpg",
+    "static/media/advice.jpg": "/mypage/static/media/advice.02e0d23dcb1bb70118d9.jpg",
+    "static/media/Tournament.jpg": "/mypage/static/media/Tournament.2cf43df8f5b5854aaf9b.jpg",
+    "static/media/rate.jpg": "/mypage/static/media/rate.f7d349aa7cc0dfde4fc0.jpg",
+    "static/media/git.png": "/mypage/static/media/git.9c6e815329fea53ab50a.png",
+    "static/media/nft.jpg": "/mypage/static/media/nft.537823e8bbff8990776a.jpg",
+    "static/media/moon.png": "/mypage/static/media/moon.f952f78c36dbaa83e9e4.png",
+    "static/media/close.png": "/mypage/static/media/close.384867709e9907da0209.png",
+    "static/media/gitWhite.png": "/mypage/static/media/gitWhite.b68c3f7aea9681f8df75.png",
+    "static/media/languages.png": "/mypage/static/media/languages.b72ff2baa3531bf74927.png",
+    "static/media/sun.png": "/mypage/static/media/sun.5f1fcf634d3d1daa7952.png",
+    "static/media/closeWhite.png": "/mypage/static/media/closeWhite.4193f76ac90be3074025.png",
+    "static/media/browser.png": "/mypage/static/media/browser.917845b6aae11c90b2cd.png",
+    "static/media/languagesWhite.png": "/mypage/static/media/languagesWhite.1e7f89d58062570552e2.png",
+    "static/media/right-arrow.png": "/mypage/static/media/right-arrow.9f5f13137e8f5e38dc04.png",
+    "static/media/browserWhite.png": "/mypage/static/media/browserWhite.7bc013bc47900fd5133a.png",
+    "static/media/project.png": "/mypage/static/media/project.e71e760da61ed8a5e685.png",
+    "index.html": "/mypage/index.html",
+    "main.254da0a7.css.map": "/mypage/static/css/main.254da0a7.css.map",
+    "main.174cded4.js.map": "/mypage/static/js/main.174cded4.js.map",
+    "787.80017ea5.chunk.js.map": "/mypage/static/js/787.80017ea5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.254da0a7.css",
+    "static/js/main.174cded4.js"
+  ]
+}
