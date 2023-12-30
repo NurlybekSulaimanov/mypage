@@ -46,7 +46,7 @@ class Home extends Component {
         name: "News-Homepage",
         image: newsProject,
         type: "Web page",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos: "https://github.com/NurlybekSulaimanov/news-homepage-main",
         prev: "https://nurlybeksulaimanov.github.io/news-homepage-main/",
         show: false,
@@ -57,7 +57,7 @@ class Home extends Component {
         name: "To-Do-List",
         image: toDoList,
         type: "React App",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos: "https://github.com/NurlybekSulaimanov/to-do-list",
         prev: "https://nurlybeksulaimanov.github.io/to-do-list/",
         show: false,
@@ -68,7 +68,7 @@ class Home extends Component {
         name: "Tournament-App",
         image: trnmnt,
         type: "React App",
-        langs: "HTML, Javascript",
+        langs: "HTML, JS",
         repos: "https://github.com/NurlybekSulaimanov/tournament/",
         prev: "https://nurlybeksulaimanov.github.io/tournament/",
         show: false,
@@ -79,7 +79,7 @@ class Home extends Component {
         name: "Advice-App",
         image: advice,
         type: "Web Component",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos:
           "https://github.com/NurlybekSulaimanov/advice-generator-app-main/",
         prev: "https://nurlybeksulaimanov.github.io/advice-generator-app-main/",
@@ -91,7 +91,7 @@ class Home extends Component {
         name: "Tip-Calculator",
         image: tipCalcImg,
         type: "Web App",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos: "https://github.com/NurlybekSulaimanov/tip-calculator-app-main/",
         prev: "https://nurlybeksulaimanov.github.io/tip-calculator-app-main/",
         show: false,
@@ -102,7 +102,7 @@ class Home extends Component {
         name: "Interactive-Rating",
         image: rate,
         type: "Web Component",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos:
           "https://github.com/NurlybekSulaimanov/interactive-rating-component-main/",
         prev: "https://nurlybeksulaimanov.github.io/interactive-rating-component-main/",
@@ -649,7 +649,6 @@ class Home extends Component {
             justifyContent: "center",
             alignItems: "flex-start",
             paddingTop: "2rem",
-            borderRadius: "2rem",
           }}
         >
           <div
@@ -1771,7 +1770,7 @@ class Home extends Component {
               <div>
                 <div
                   style={{
-                    margin: "1rem 1rem 2rem 1rem",
+                    margin: "1rem",
                     display: "flex",
                     flexWrap: "wrap",
                   }}
@@ -1781,8 +1780,8 @@ class Home extends Component {
                       display: "flex",
                       alignItems: "center",
                       marginBottom: "1rem",
-                      padding: "5% 5% 0 0",
                       flex: "0 0 50%",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1818,6 +1817,7 @@ class Home extends Component {
                       display: "flex",
                       alignItems: "center",
                       marginBottom: "1rem",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1853,6 +1853,7 @@ class Home extends Component {
                       display: "flex",
                       alignItems: "center",
                       marginBottom: "1rem",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1893,6 +1894,8 @@ class Home extends Component {
                       flex: "0 0 50%",
                       display: "flex",
                       alignItems: "center",
+                      marginBottom: "1rem",
+                      height: "35px",
                     }}
                   >
                     <img
