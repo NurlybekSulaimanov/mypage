@@ -46,7 +46,7 @@ class Home extends Component {
         name: "News-Homepage",
         image: newsProject,
         type: "Web page",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos: "https://github.com/NurlybekSulaimanov/news-homepage-main",
         prev: "https://nurlybeksulaimanov.github.io/news-homepage-main/",
         show: false,
@@ -54,10 +54,10 @@ class Home extends Component {
       },
       DoList: {
         projName: "DoList",
-        name: "ToDo-List",
+        name: "To-Do-List",
         image: toDoList,
         type: "React App",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos: "https://github.com/NurlybekSulaimanov/to-do-list",
         prev: "https://nurlybeksulaimanov.github.io/to-do-list/",
         show: false,
@@ -68,7 +68,7 @@ class Home extends Component {
         name: "Tournament-App",
         image: trnmnt,
         type: "React App",
-        langs: "HTML, Javascript",
+        langs: "HTML, JS",
         repos: "https://github.com/NurlybekSulaimanov/tournament/",
         prev: "https://nurlybeksulaimanov.github.io/tournament/",
         show: false,
@@ -79,7 +79,7 @@ class Home extends Component {
         name: "Advice-App",
         image: advice,
         type: "Web Component",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos:
           "https://github.com/NurlybekSulaimanov/advice-generator-app-main/",
         prev: "https://nurlybeksulaimanov.github.io/advice-generator-app-main/",
@@ -91,7 +91,7 @@ class Home extends Component {
         name: "Tip-Calculator",
         image: tipCalcImg,
         type: "Web App",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos: "https://github.com/NurlybekSulaimanov/tip-calculator-app-main/",
         prev: "https://nurlybeksulaimanov.github.io/tip-calculator-app-main/",
         show: false,
@@ -102,7 +102,7 @@ class Home extends Component {
         name: "Interactive-Rating",
         image: rate,
         type: "Web Component",
-        langs: "HTML, CSS, Javascript",
+        langs: "HTML, CSS, JS",
         repos:
           "https://github.com/NurlybekSulaimanov/interactive-rating-component-main/",
         prev: "https://nurlybeksulaimanov.github.io/interactive-rating-component-main/",
@@ -123,7 +123,7 @@ class Home extends Component {
       },
       productCard: {
         projName: "productCard",
-        name: "product-Component",
+        name: "Product-Component",
         image: compon,
         type: "Web Component",
         langs: "HTML, CSS",
@@ -302,7 +302,7 @@ class Home extends Component {
                   justifyContent: "flex-start",
                   paddingLeft: "30px",
                   alignItems: "center",
-                  transition: "width 0.3s",
+                  transition: "width 0.4s",
                   position: "absolute",
                   right: ".5rem",
                   letterSpacing: "1px",
@@ -432,7 +432,7 @@ class Home extends Component {
           display: screenWidth <= 991 ? "flex" : "grid",
           gridTemplateColumns: screenWidth <= 991 ? "none" : "4fr 5fr 1fr",
           fontFamily: "sans-serif",
-          paddingBottom: screenWidth <= 991 ? "120px" : "0",
+          paddingBottom: screenWidth <= 991 ? "60px" : "0",
           overflowY: "auto",
           flexDirection: "column",
           textAlign:
@@ -463,15 +463,15 @@ class Home extends Component {
                   : "none",
               borderRadius: screenWidth <= 991 ? "50%" : "30px",
               height:
-                screenWidth > 991
+                screenWidth >= 991
                   ? "650px"
-                  : screenWidth < 556
-                  ? "222px"
+                  : screenWidth <= 556
+                  ? "242px"
                   : "262px",
               width:
                 screenWidth <= 991
                   ? "262px"
-                  : screenWidth < 556
+                  : screenWidth <= 556
                   ? "222px"
                   : "450px",
             }}
@@ -505,7 +505,7 @@ class Home extends Component {
               fontWeight: "700",
             }}
           >
-            I'M Nurlybek (Nurik).
+            I am Nurlybek (Nurik)
           </h1>
           <h1
             style={{
@@ -552,7 +552,8 @@ class Home extends Component {
                 width: "225px",
                 display: "flex",
                 flexDirection: "row-reverse",
-                position: "relative", // Set parent div to relative position
+                position: "relative",
+                paddingBottom: "2rem",
               }}
               onClick={() => {
                 this.setState({ showAbout: true });
@@ -647,29 +648,36 @@ class Home extends Component {
             display: showAbout ? "flex" : "none",
             justifyContent: "center",
             alignItems: "flex-start",
-            overflowY: "auto",
+            paddingTop: "2rem",
           }}
         >
           <div
             style={{
-              display: showAbout ? "block" : "none",
+              display: showAbout ? "flex" : "none",
               width: "90%",
               zIndex: 100,
               backgroundColor: darkMode ? "#252525" : "#F5F5F5",
-              margin: screenWidth <= 800 ? "10% 15%" : "5% 15%",
+              margin: screenWidth <= 800 ? "10% 10%" : "5% 5%",
             }}
           >
             <div
               data-aos="fade"
               className="aos-init aos-animate"
-              style={{ textAlign: "center", color: "#FFB400" }}
+              style={{
+                textAlign: "center",
+                color: "#FFB400",
+                height: "75vh",
+                overflowY: "auto",
+              }}
             >
               {this._about()}
+            </div>
+            <div style={{ position: "relative" }}>
               <button
                 style={{
                   position: "absolute",
-                  top: "-52px",
-                  right: "-86px",
+                  top: screenWidth <= 550 ? "-48px" : "-59px",
+                  right: screenWidth <= 550 ? "-23px" : "-45px",
                   backgroundColor: "transparent",
                   height: "50px",
                   width: "50px",
@@ -689,7 +697,10 @@ class Home extends Component {
                 <img
                   src={darkMode ? closeIcon : closeWhiteIcon}
                   alt="closeIcon"
-                  style={{ width: "50px", height: "50px" }}
+                  style={{
+                    width: screenWidth <= 550 ? "35px" : "50px",
+                    height: screenWidth <= 550 ? "35px" : "50px",
+                  }}
                 />
               </button>
             </div>
@@ -700,7 +711,7 @@ class Home extends Component {
     );
   }
   _about() {
-    const { darkMode, screenWidth } = this.state;
+    const { darkMode, screenWidth, showAbout } = this.state;
     const skillsData = [
       { label: "HTML", percentage: 89 },
       { label: "JavaScript", percentage: 70 },
@@ -713,7 +724,7 @@ class Home extends Component {
     ];
 
     const chartOptions = {
-      barSize: screenWidth <= 550 ? "140" : "185",
+      barSize: screenWidth <= 860 ? "140" : "185",
       labels: skillsData.map((data) => data.label),
       series: skillsData.map((data) => data.percentage),
       colors: [
@@ -755,7 +766,7 @@ class Home extends Component {
           background: darkMode ? "black" : "white",
           display: "flex",
           fontFamily: "sans-serif",
-          paddingBottom: screenWidth <= 991 ? "120px" : "0",
+          paddingBottom: showAbout ? "0" : screenWidth <= 991 ? "60px" : "0",
           flexDirection: "column",
           overflowY: "auto",
           textAlign:
@@ -827,13 +838,50 @@ class Home extends Component {
               style={{
                 display: "flex",
                 flexDirection: screenWidth < 991 ? "column" : "row",
-                margin: "5% 10% 0 10%",
+                margin: screenWidth <= 550 ? "5% 5% 0 5%" : "5% 10% 0 10%",
               }}
             >
               <div style={{ flex: "0 0 50%" }}>
                 <div style={{ color: darkMode ? "white" : "#666" }}>
                   <h3 style={{ fontSize: "24px" }}>PERSONAL INFOS</h3>
                 </div>
+                {showAbout && screenWidth <= 800 && (
+                  <div
+                    style={{
+                      borderRadius: "10px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    <img
+                      src={screenWidth <= 991 ? phoneImage : guitar}
+                      style={{
+                        margin: "1rem",
+                        border:
+                          screenWidth <= 991
+                            ? darkMode
+                              ? "4px solid #252525"
+                              : "4px solid #eee"
+                            : "none",
+                        borderRadius: screenWidth <= 991 ? "50%" : "30px",
+                        height:
+                          screenWidth >= 991
+                            ? "650px"
+                            : screenWidth <= 556
+                            ? "242px"
+                            : "262px",
+                        width:
+                          screenWidth <= 991
+                            ? "262px"
+                            : screenWidth <= 556
+                            ? "222px"
+                            : "450px",
+                      }}
+                      alt="portrait"
+                    />
+                  </div>
+                )}
                 <div style={{ paddingLeft: "15px", paddingRight: "15px" }}>
                   <ul
                     style={{
@@ -1012,7 +1060,7 @@ class Home extends Component {
                           rel="noopener noreferrer"
                           style={{ color: "#D89C00" }}
                         >
-                          Nurlybek's Git
+                          My Git
                         </a>
                       </span>
                     </li>
@@ -1214,6 +1262,7 @@ class Home extends Component {
                           color: darkMode ? "white" : "#666",
                           fontSize: "18px",
                           margin: "7px 0 10px 0",
+                          textAlign: "start",
                         }}
                       >
                         Web Developer
@@ -1235,6 +1284,7 @@ class Home extends Component {
                             marginTop: "1rem",
                             fontSize: "14px",
                             fontWeight: "400",
+                            lineHeight: "1.5",
                           }}
                         >
                           Developing <strong>new user-facing features</strong>,
@@ -1300,6 +1350,7 @@ class Home extends Component {
                           color: darkMode ? "white" : "#666",
                           fontSize: "18px",
                           margin: "7px 0 10px 0",
+                          textAlign: "start",
                         }}
                       >
                         Certificates
@@ -1321,6 +1372,7 @@ class Home extends Component {
                             marginTop: "1rem",
                             fontSize: "14px",
                             fontWeight: "400",
+                            lineHeight: "1.5",
                           }}
                         >
                           Successfully completed the courses{" "}
@@ -1389,6 +1441,7 @@ class Home extends Component {
                           color: darkMode ? "white" : "#666",
                           fontSize: "18px",
                           margin: "7px 0 10px 0",
+                          textAlign: "start",
                         }}
                       >
                         Bachelor Degree
@@ -1410,6 +1463,7 @@ class Home extends Component {
                             marginTop: "1rem",
                             fontSize: "14px",
                             fontWeight: "400",
+                            lineHeight: "1.5",
                           }}
                         >
                           Achieved a Bachelor's Degree from KAIST, one of the
@@ -1442,7 +1496,8 @@ class Home extends Component {
                 style={{
                   display: "flex",
                   flexDirection: "column",
-                  margin: "0 10% 20px 10%",
+                  margin:
+                    screenWidth <= 550 ? "0 5% 20px 5%" : "0 10% 20px 10%",
                 }}
               >
                 <div style={{ textAlign: "center", margin: "0 10% 20px 10%" }}>
@@ -1455,7 +1510,13 @@ class Home extends Component {
                     My Skills
                   </h2>
                 </div>
-                <div style={{ display: "flex", flexWrap: "wrap" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "center",
+                  }}
+                >
                   {skillsData.map((data, index) => (
                     <div
                       key={index}
@@ -1464,7 +1525,7 @@ class Home extends Component {
                         display: "flex",
                         flexDirection: "column",
                         alignItems: "center",
-                        width: screenWidth <= 550 ? "150px" : "auto",
+                        width: screenWidth <= 800 ? "150px" : "auto",
                       }}
                     >
                       <Chart
@@ -1497,7 +1558,7 @@ class Home extends Component {
           background: darkMode ? "black" : "white",
           display: "flex",
           fontFamily: "sans-serif",
-          paddingBottom: screenWidth <= 991 ? "120px" : "0",
+          paddingBottom: screenWidth <= 991 ? "60px" : "0",
           flexDirection: "column",
           overflowY: "auto",
           textAlign:
@@ -1518,6 +1579,7 @@ class Home extends Component {
                 position: "relative",
                 display: "flex",
                 justifyContent: "center",
+                marginBottom: "2rem",
               }}
             >
               <div
@@ -1575,7 +1637,7 @@ class Home extends Component {
                     : "repeat(3,1fr)",
                 gridGap: "30px",
                 gap: "30px",
-                paddingBottom: "120px",
+                paddingBottom: "60px",
                 width: "100%",
                 height: "100%",
                 borderRadius: "1rem",
@@ -1708,7 +1770,7 @@ class Home extends Component {
               <div>
                 <div
                   style={{
-                    margin: "1rem 1rem 2rem 1rem",
+                    margin: "1rem",
                     display: "flex",
                     flexWrap: "wrap",
                   }}
@@ -1717,9 +1779,9 @@ class Home extends Component {
                     style={{
                       display: "flex",
                       alignItems: "center",
-                      marginBottom: "5%",
-                      padding: "5% 5% 0 0",
+                      marginBottom: "1rem",
                       flex: "0 0 50%",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1743,6 +1805,7 @@ class Home extends Component {
                       style={{
                         color: darkMode ? "white" : "#666666",
                         fontWeight: "600",
+                        width: "max-content",
                       }}
                     >
                       {shownProject.type}
@@ -1753,6 +1816,8 @@ class Home extends Component {
                       flex: "0 0 50%",
                       display: "flex",
                       alignItems: "center",
+                      marginBottom: "1rem",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1776,6 +1841,7 @@ class Home extends Component {
                       style={{
                         color: darkMode ? "white" : "#666666",
                         fontWeight: "600",
+                        width: "max-content",
                       }}
                     >
                       {shownProject.langs}
@@ -1786,6 +1852,8 @@ class Home extends Component {
                       flex: "0 0 50%",
                       display: "flex",
                       alignItems: "center",
+                      marginBottom: "1rem",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1815,7 +1883,7 @@ class Home extends Component {
                         href={shownProject.repos}
                         target="_blank"
                         rel="noopener noreferrer"
-                        style={{ color: "#D89C00" }}
+                        style={{ color: "#D89C00", width: "max-content" }}
                       >
                         Repository
                       </a>
@@ -1826,6 +1894,8 @@ class Home extends Component {
                       flex: "0 0 50%",
                       display: "flex",
                       alignItems: "center",
+                      marginBottom: "1rem",
+                      height: "35px",
                     }}
                   >
                     <img
@@ -1849,6 +1919,7 @@ class Home extends Component {
                       style={{
                         color: darkMode ? "white" : "#666666",
                         fontWeight: "600",
+                        width: "max-content",
                       }}
                     >
                       <a
@@ -1887,8 +1958,8 @@ class Home extends Component {
               <button
                 style={{
                   position: "absolute",
-                  top: "-52px",
-                  right: "-86px",
+                  top: screenWidth <= 550 ? "-82px" : "-52px",
+                  right: screenWidth <= 550 ? "-51px" : "-86px",
                   backgroundColor: "transparent",
                   height: "50px",
                   width: "50px",
@@ -1909,7 +1980,10 @@ class Home extends Component {
                 <img
                   src={darkMode ? closeIcon : closeWhiteIcon}
                   alt="closeIcon"
-                  style={{ width: "50px", height: "50px" }}
+                  style={{
+                    width: screenWidth <= 550 ? "35px" : "50px",
+                    height: screenWidth <= 550 ? "35px" : "50px",
+                  }}
                 />
               </button>
             </div>
